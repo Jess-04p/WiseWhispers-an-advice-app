@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+#root,html,body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section{
+    height:100%;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url('./pictures/background_img.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainheading {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 36px;
+    font-weight:bolder;
+    color: black;
+    align-items: center;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card{
+    margin-top: 7%;
+    background-color: aliceblue;
+    width: 40%;
+    height: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 10px 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.headingg{
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.buttonn1{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 40px;
+    width: 200px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0, 0.6);
+    margin-right: 210px;
+} 
+
+.buttonn2{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 40px;
+    width: 80px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0, 0.6);
+    margin-right: 0px;
+}
+
+.buttonn1 span {
+    color: #12508f;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    padding: 4px;
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.buttonn2 span {
+    color: #12508f;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    padding: 5px;
+}
+    
+.buttonn1:hover {
+    animation: rotate 0.7s ease-in-out both;
+    background-color: #12508f;    
+}
+    
+.buttonn1:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+    color: #ffffff;
+}
+
+.buttonn2:hover{
+    background-color: #12508f;
+}
+
+.buttonn2:hover span{
+    color: #ffffff;
+}
+    
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+    
+@keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media only screen and(min-width:600px){
+    .card{
+        width:80%;
+        height:30%;
+    }
+    .buttonn1,.buttonn2{
+      margin: auto;
+    }
 }
